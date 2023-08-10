@@ -22,9 +22,13 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
+    -- set to 'false' to use tree-sitter installed by home-manager
+    -- reset_packpath = true, -- reset the package path to improve startup time
     rtp = {
+      -- reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
+
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
